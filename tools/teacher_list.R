@@ -4,12 +4,12 @@ library(stringr)
 args <- commandArgs(T)
 folder <- args[1]
 
-setwd("C:/Users/RY/git/stateacher") # 修改为自己的目录
+setwd("C:/Users/HCY/stateacher") # 修改为自己的目录
 
 path = paste0('Data/', folder)
 dat_tmp = read.csv(paste0(path, '/', folder, '.csv'), stringsAsFactors = FALSE)
 dat = dat_tmp
-# dat = subset(dat_tmp, regular_employee==1) # 筛选
+# dat = subset(dat_tmp, regular_employee==1) # 筛�?
 
 namesALL = gsub(' ', '-', dat$name)
 namesALL = gsub('--', '-', namesALL)
